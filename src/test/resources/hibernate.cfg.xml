@@ -21,5 +21,9 @@
 		
 		<!-- Mapping des entities -->
 		<mapping class="entity.Employee" />
+		<mapping class="entity.ActivityArea" />
+		<mapping class="entity.Affiliate" />
+		<mapping class="entity.Location" />
+		<mapping class="entity.Company" />
 	</session-factory>
 </hibernate-configuration>
