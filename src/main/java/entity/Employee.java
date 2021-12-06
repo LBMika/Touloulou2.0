@@ -20,6 +20,15 @@ public class Employee {
 	private String phoneNumber;
 	
 	
+	/**
+	 * Default constructor
+	 */
+	public Employee() {
+		super();
+		this.id = -1;
+		this.age = -1;
+	}
+	
 	
 	// Getters/Setters block
 	
@@ -59,8 +68,11 @@ public class Employee {
 		return age;
 	}
 	
-	public void setAge(int age) {
-		this.age = age;
+	public void setAge(int age) throws IllegalArgumentException {
+		if (age<=0)
+			throw new IllegalArgumentException("Employee : Age can't be under or equal to zero.");
+		else
+			this.age = age;
 	}
 	
 	public String getRoleTitle() {
