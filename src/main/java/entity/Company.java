@@ -1,9 +1,13 @@
 package entity;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -13,6 +17,9 @@ public class Company {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long id;
 	private String name;
+	
+	@OneToMany(mappedBy="company", cascade=CascadeType.ALL)
+	private Set<Affiliate> affiliates;
 	
 	// Getters/Setters block
 	
@@ -30,6 +37,14 @@ public class Company {
 	
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Set<Affiliate> getAffiliates() {
+		return affiliates;
+	}
+
+	public void setAffiliates(Set<Affiliate> affiliates) {
+		this.affiliates = affiliates;
 	}
 	
 }
