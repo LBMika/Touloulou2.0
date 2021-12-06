@@ -84,21 +84,24 @@ public class TouloulouManager {
 		
 		// Binding locations
 		loc1.addEmployee(employee1);
+		loc2.addEmployee(employee2);
+		loc3.addEmployee(employee3);
+		
 		loc1.addActivityArea(area1);
 		loc1.addActivityArea(area2);
-		loc2.addEmployee(employee2);
 		loc2.addActivityArea(area3);
 		loc2.addActivityArea(area4);
-		loc3.addEmployee(employee3);
 		loc3.addActivityArea(area5);
 		
 		// Binding employees
 		employee1.setLocation(loc1);
-		employee1.setActivityArea(area4);
 		employee2.setLocation(loc2);
-		employee2.setActivityArea(area3);	
 		employee3.setLocation(loc3);
+
+		employee1.setActivityArea(area4);
+		employee2.setActivityArea(area3);	
 		employee3.setActivityArea(area5);
+		
 		
 		// Binding company
 		company.addAffiliate(aff1);
@@ -126,14 +129,15 @@ public class TouloulouManager {
 		
 		// Binding activity areas
 		area1.setLocation(loc1);
-		area2.setLocation(loc2);
-		area3.setLocation(loc1);
+		area2.setLocation(loc1);
+		area3.setLocation(loc2);
 		area4.setLocation(loc2);
 		area5.setLocation(loc3);
 		
 		area4.addEmployee(employee1);
 		area3.addEmployee(employee2);
 		area5.addEmployee(employee3);
+		
 		area1.addAffiliate(aff3);
 		area2.addAffiliate(aff1);
 		area2.addAffiliate(aff2);
@@ -147,6 +151,30 @@ public class TouloulouManager {
 		area5.addAffiliate(aff2);
 		area5.addAffiliate(aff3);
 
+
+		System.out.println("*****************************************");
+
+		System.out.println(employee1.getFirstname()+" : "+employee1.getActivityArea().getName());
+		System.out.println(employee2.getFirstname()+" : "+employee2.getActivityArea().getName());
+		System.out.println(employee3.getFirstname()+" : "+employee3.getActivityArea().getName());
+		
+		System.out.print(area4.getName()+" : ");
+		for(Employee e : area4.getEmployees())
+			System.out.print(e.getFirstname());
+		System.out.println();
+		
+		System.out.print(area3.getName()+" : ");
+		for(Employee e : area3.getEmployees())
+			System.out.print(e.getFirstname());
+		System.out.println();
+			
+		System.out.print(area5.getName()+" : ");
+		for(Employee e : area5.getEmployees())
+			System.out.print(e.getFirstname());
+		System.out.println();
+		
+		
+		System.out.println("*****************************************");
 		
 
 		// Saving
