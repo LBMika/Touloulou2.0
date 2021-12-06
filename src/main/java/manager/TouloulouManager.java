@@ -184,7 +184,8 @@ public class TouloulouManager {
 		session.save(aff2);
 		session.save(aff3);
 		*/
-		session.save(employee1);
+		session.save(loc1);
+		session.save(company);
 		/*
 		session.save(loc1);
 		session.save(loc2);
