@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -19,7 +20,7 @@ public class Company {
 	private String name;
 	
 	@OneToMany(mappedBy="company", cascade=CascadeType.ALL)
-	private Set<Affiliate> affiliates;
+	private Set<Affiliate> affiliates = new HashSet<Affiliate>();
 	
 	
 	public void addAffiliate(Affiliate a) {

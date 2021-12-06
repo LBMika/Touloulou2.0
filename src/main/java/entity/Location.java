@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -21,10 +22,10 @@ public class Location {
 	private String address;
 	
 	@OneToMany(mappedBy="location", cascade=CascadeType.ALL)
-	private Set<ActivityArea> activityAreas;
+	private Set<ActivityArea> activityAreas = new HashSet<ActivityArea>();
 	
 	@OneToMany(mappedBy="location", cascade=CascadeType.ALL)
-	private Set<Employee> employees;
+	private Set<Employee> employees = new HashSet<Employee>();
 	
 	
 	public void addActivityArea(ActivityArea a) {

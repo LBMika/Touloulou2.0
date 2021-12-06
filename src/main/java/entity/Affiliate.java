@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -31,7 +32,7 @@ public class Affiliate {
 			name="activity_area_affiliate", 
 			joinColumns = @JoinColumn(name="affiliate_id"),
 			inverseJoinColumns = @JoinColumn(name="activity_area_id"))
-	private Set<ActivityArea> activityAreas;
+	private Set<ActivityArea> activityAreas = new HashSet<ActivityArea>();
 	
 	
 	public void addActivityArea(ActivityArea a) {

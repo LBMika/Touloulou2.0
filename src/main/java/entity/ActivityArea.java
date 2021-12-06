@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -22,11 +23,11 @@ public class ActivityArea {
 	private String name;
 	
 	@OneToMany(mappedBy="activityArea", cascade=CascadeType.ALL)
-	private Set<Employee> employees;
+	private Set<Employee> employees = new HashSet<Employee>();
 	
 	
 	@ManyToMany(mappedBy = "activityAreas")
-	private Set<Affiliate> affiliates;
+	private Set<Affiliate> affiliates = new HashSet<Affiliate>();
 	
 	@ManyToOne
 	@JoinColumn(name="location_id")
