@@ -25,6 +25,10 @@ public class Employee {
 	@JoinColumn(name="activity_area_id")
 	private ActivityArea activityArea;
 	
+	@ManyToOne
+	@JoinColumn(name="location_id")
+	private Location location;
+	
 	
 	
 	/**
