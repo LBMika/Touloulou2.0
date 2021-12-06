@@ -34,6 +34,11 @@ public class Affiliate {
 	private Set<ActivityArea> activityAreas;
 	
 	
+	public void addActivityArea(ActivityArea a) {
+		this.activityAreas.add(a);
+	}
+	
+	
 	// Getters/Setters block
 	
 	

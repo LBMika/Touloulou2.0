@@ -33,6 +33,15 @@ public class ActivityArea {
 	private Location location;
 	
 	
+
+	public void addEmployee(Employee e) {
+		this.employees.add(e);
+	}
+	
+	public void addAffiliate(Affiliate a) {
+		this.affiliates.add(a);
+	}
+	
 	// Getters/Setters block
 	
 	

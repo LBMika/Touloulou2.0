@@ -26,6 +26,15 @@ public class Location {
 	@OneToMany(mappedBy="location", cascade=CascadeType.ALL)
 	private Set<Employee> employees;
 	
+	
+	public void addActivityArea(ActivityArea a) {
+		this.activityAreas.add(a);
+	}
+	
+	public void addEmployee(Employee e) {
+		this.employees.add(e);
+	}
+	
 
 	// Getters/Setters block
 	

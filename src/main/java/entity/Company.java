@@ -21,6 +21,12 @@ public class Company {
 	@OneToMany(mappedBy="company", cascade=CascadeType.ALL)
 	private Set<Affiliate> affiliates;
 	
+	
+	public void addAffiliate(Affiliate a) {
+		this.affiliates.add(a);
+	}
+	
+	
 	// Getters/Setters block
 	
 	public long getId() {
