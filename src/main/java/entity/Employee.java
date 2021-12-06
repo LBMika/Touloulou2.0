@@ -27,7 +27,7 @@ public class Employee {
 	
 	@ManyToOne
 	@JoinColumn(name="location_id")
-	private Location location;
+	private Location employeeLocation;
 	
 	
 	
@@ -114,12 +114,12 @@ public class Employee {
 
 
 	public Location getLocation() {
-		return location;
+		return employeeLocation;
 	}
 
 
 	public void setLocation(Location location) {
-		this.location = location;
+		this.employeeLocation = location;
 	}
 	
 }

@@ -31,7 +31,7 @@ public class ActivityArea {
 	
 	@ManyToOne
 	@JoinColumn(name="location_id")
-	private Location location;
+	private Location activityLocation;
 	
 	
 
@@ -79,11 +79,11 @@ public class ActivityArea {
 	}
 
 	public Location getLocation() {
-		return location;
+		return activityLocation;
 	}
 
 	public void setLocation(Location location) {
-		this.location = location;
+		this.activityLocation = location;
 	}
 
 }

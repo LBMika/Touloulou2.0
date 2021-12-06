@@ -21,10 +21,10 @@ public class Location {
 	private String zipcode;
 	private String address;
 	
-	@OneToMany(mappedBy="location", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="activityLocation", cascade=CascadeType.ALL)
 	private Set<ActivityArea> activityAreas = new HashSet<ActivityArea>();
 	
-	@OneToMany(mappedBy="location", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="employeeLocation", cascade=CascadeType.ALL)
 	private Set<Employee> employees = new HashSet<Employee>();
 	
 	
