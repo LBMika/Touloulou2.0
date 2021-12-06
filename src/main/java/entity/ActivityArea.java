@@ -7,7 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -25,6 +27,10 @@ public class ActivityArea {
 	
 	@ManyToMany(mappedBy = "activityAreas")
 	private Set<Affiliate> affiliates;
+	
+	@ManyToOne
+	@JoinColumn(name="location_id")
+	private Location location;
 	
 	
 	// Getters/Setters block

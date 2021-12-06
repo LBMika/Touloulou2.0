@@ -1,9 +1,13 @@
 package entity;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +20,9 @@ public class Location {
 	private String zipcode;
 	private String address;
 	
-
+	@OneToMany(mappedBy="location", cascade=CascadeType.ALL)
+	private Set<ActivityArea> activityAreas;
+	
 
 	// Getters/Setters block
 	
