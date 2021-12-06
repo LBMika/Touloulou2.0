@@ -60,4 +60,20 @@ public class ActivityArea {
 		this.employees = employees;
 	}
 
+	public Set<Affiliate> getAffiliates() {
+		return affiliates;
+	}
+
+	public void setAffiliates(Set<Affiliate> affiliates) {
+		this.affiliates = affiliates;
+	}
+
+	public Location getLocation() {
+		return location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
 }

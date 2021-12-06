@@ -111,5 +111,15 @@ public class Employee {
 	public void setActivityArea(ActivityArea activityArea) {
 		this.activityArea = activityArea;
 	}
+
+
+	public Location getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 	
 }

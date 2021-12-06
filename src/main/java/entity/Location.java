@@ -61,4 +61,21 @@ public class Location {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	public Set<ActivityArea> getActivityAreas() {
+		return activityAreas;
+	}
+
+	public void setActivityAreas(Set<ActivityArea> activityAreas) {
+		this.activityAreas = activityAreas;
+	}
+
+	public Set<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(Set<Employee> employees) {
+		this.employees = employees;
+	}
+	
 }

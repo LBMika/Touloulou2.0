@@ -60,6 +60,14 @@ public class Affiliate {
 	public void setCompany(Company company) {
 		this.company = company;
 	}
+
+	public Set<ActivityArea> getActivityAreas() {
+		return activityAreas;
+	}
+
+	public void setActivityAreas(Set<ActivityArea> activityAreas) {
+		this.activityAreas = activityAreas;
+	}
 	
 	
 }
