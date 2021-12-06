@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +20,11 @@ public class Employee {
 	private int age;
 	private String roleTitle;
 	private String phoneNumber;
+	
+	@ManyToOne
+	@JoinColumn(name="activity_area_id")
+	private ActivityArea activityArea;
+	
 	
 	
 	/**
@@ -89,6 +96,16 @@ public class Employee {
 	
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+
+	public ActivityArea getActivityArea() {
+		return activityArea;
+	}
+
+
+	public void setActivityArea(ActivityArea activityArea) {
+		this.activityArea = activityArea;
 	}
 	
 }
