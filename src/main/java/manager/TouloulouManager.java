@@ -25,6 +25,7 @@ public class TouloulouManager {
 		loc1.setTown("TouloulouVille");
 		loc1.setZipcode("12345");
 		loc1.setAddress("3 rue de la malice");
+		/*
 		Location loc2 = new Location();
 		loc2.setTown("AlphaBeta");
 		loc2.setZipcode("56789");
@@ -33,6 +34,7 @@ public class TouloulouManager {
 		loc3.setTown("Nowhere");
 		loc3.setZipcode("66666");
 		loc3.setAddress("Boulevard de la joie");
+		*/
 		
 		// Company
 		Company company = new Company();
@@ -41,14 +43,17 @@ public class TouloulouManager {
 		// Affiliates
 		Affiliate aff1 = new Affiliate();
 		aff1.setName("Cacao stuff");
+		/*
 		Affiliate aff2 = new Affiliate();
 		aff2.setName("Sugar stuff");
 		Affiliate aff3 = new Affiliate();
 		aff3.setName("Cotton stuff");
+		*/
 		
 		// Activities area
 		ActivityArea area1 = new ActivityArea();
 		area1.setName("Cotton");
+		/*
 		ActivityArea area2 = new ActivityArea();
 		area2.setName("Esclavage");
 		ActivityArea area3 = new ActivityArea();
@@ -57,6 +62,7 @@ public class TouloulouManager {
 		area4.setName("Child labor");
 		ActivityArea area5 = new ActivityArea();
 		area5.setName("Profits");
+		*/
 		
 		// Employees
 		Employee employee1 = new Employee();
@@ -66,6 +72,7 @@ public class TouloulouManager {
 		employee1.setLastname("Titi");
 		employee1.setRoleTitle("Exploted child");
 		employee1.setPhoneNumber("0323232323");
+		/*
 		Employee employee2 = new Employee();
 		employee2.setAge(33);
 		employee2.setEmail("ttttttt@rrrrrrrrr.fr");
@@ -80,40 +87,44 @@ public class TouloulouManager {
 		employee3.setLastname("Blizzard");
 		employee3.setRoleTitle("The Big One");
 		employee3.setPhoneNumber("0666666666");
+		*/
 		
 		
 		// Binding locations
 		loc1.addEmployee(employee1);
-		loc2.addEmployee(employee2);
-		loc3.addEmployee(employee3);
+		//loc2.addEmployee(employee2);
+		//loc3.addEmployee(employee3);
 		
 		loc1.addActivityArea(area1);
-		loc1.addActivityArea(area2);
-		loc2.addActivityArea(area3);
-		loc2.addActivityArea(area4);
-		loc3.addActivityArea(area5);
+		//loc1.addActivityArea(area2);
+		//loc2.addActivityArea(area3);
+		//loc2.addActivityArea(area4);
+		//oc3.addActivityArea(area5);
 		
 		// Binding employees
 		employee1.setLocation(loc1);
-		employee2.setLocation(loc2);
-		employee3.setLocation(loc3);
+		//employee2.setLocation(loc2);
+		//employee3.setLocation(loc3);
 
-		employee1.setActivityArea(area4);
-		employee2.setActivityArea(area3);	
-		employee3.setActivityArea(area5);
+		employee1.setActivityArea(area1);
+		//employee2.setActivityArea(area3);	
+		//employee3.setActivityArea(area5);
 		
 		
 		// Binding company
 		company.addAffiliate(aff1);
-		company.addAffiliate(aff2);
-		company.addAffiliate(aff3);
+		//company.addAffiliate(aff2);
+		//company.addAffiliate(aff3);
 		
 		// Binding affiliates
 		aff1.setCompany(company);
+		aff1.addActivityArea(area1);
+		/*
 		aff1.addActivityArea(area2);
 		aff1.addActivityArea(area3);
 		aff1.addActivityArea(area4);
 		aff1.addActivityArea(area5);
+		
 		
 		aff2.setCompany(company);
 		aff2.addActivityArea(area2);
@@ -126,19 +137,23 @@ public class TouloulouManager {
 		aff3.addActivityArea(area2);
 		aff3.addActivityArea(area4);
 		aff3.addActivityArea(area5);
+		*/
 		
 		// Binding activity areas
 		area1.setLocation(loc1);
+		/*
 		area2.setLocation(loc1);
 		area3.setLocation(loc2);
 		area4.setLocation(loc2);
 		area5.setLocation(loc3);
+		*/
 		
-		area4.addEmployee(employee1);
-		area3.addEmployee(employee2);
-		area5.addEmployee(employee3);
+		area1.addEmployee(employee1);
+		//area3.addEmployee(employee2);
+		//area5.addEmployee(employee3);
 		
-		area1.addAffiliate(aff3);
+		area1.addAffiliate(aff1);
+		/*
 		area2.addAffiliate(aff1);
 		area2.addAffiliate(aff2);
 		area2.addAffiliate(aff3);
@@ -150,29 +165,11 @@ public class TouloulouManager {
 		area5.addAffiliate(aff1);
 		area5.addAffiliate(aff2);
 		area5.addAffiliate(aff3);
+		*/
 
 
 		System.out.println("*****************************************");
 
-		System.out.println(employee1.getFirstname()+" : "+employee1.getActivityArea().getName());
-		System.out.println(employee2.getFirstname()+" : "+employee2.getActivityArea().getName());
-		System.out.println(employee3.getFirstname()+" : "+employee3.getActivityArea().getName());
-		
-		System.out.print(area4.getName()+" : ");
-		for(Employee e : area4.getEmployees())
-			System.out.print(e.getFirstname());
-		System.out.println();
-		
-		System.out.print(area3.getName()+" : ");
-		for(Employee e : area3.getEmployees())
-			System.out.print(e.getFirstname());
-		System.out.println();
-			
-		System.out.print(area5.getName()+" : ");
-		for(Employee e : area5.getEmployees())
-			System.out.print(e.getFirstname());
-		System.out.println();
-		
 		
 		System.out.println("*****************************************");
 		
@@ -187,10 +184,13 @@ public class TouloulouManager {
 		session.save(aff2);
 		session.save(aff3);
 		*/
-		// session.save(company);
+		session.save(employee1);
+		/*
 		session.save(loc1);
 		session.save(loc2);
 		session.save(loc3);
+		*/
+		
 		
 		
 		
